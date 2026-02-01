@@ -28,5 +28,13 @@ public class ProductController {
         ProductResponse productResponse = productService.getAllProducts();
         return new ResponseEntity<>(productResponse, HttpStatus.OK);
     }
+
+    @GetMapping("/public/categories/{categoryId}/products")
+    public ResponseEntity<ProductResponse> getAProductsByCategory(@PathVariable Long categoryId) {
+        ProductResponse productResponse = productService.searchByCategory(categoryId);
+        return new ResponseEntity<>(productResponse, HttpStatus.OK);
+    }
+
+
 }
 
