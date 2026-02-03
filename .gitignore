@@ -13,6 +13,11 @@ target/
 .springBeans
 .sts4-cache
 
+# Uploaded images (runtime files)
+images/*
+!images/.gitkeep
+
+
 ### IntelliJ IDEA ###
 .idea
 *.iws
